@@ -9,8 +9,8 @@ describe('TrainingCourseListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ 
-        TrainingCourseListComponent 
+      declarations: [
+        TrainingCourseListComponent
       ],
       providers: [
         TrainingCourseService
@@ -34,6 +34,7 @@ describe('TrainingCourseListComponent', () => {
 
     const compiled = fixture.nativeElement;
     const rows = compiled.querySelector('table.training-course tbody tr');
-    expect(rows.length == 2).toBeTrue();
+    expect(rows.length === 2).toBeTrue();
+    expect(rows).toContain('front-end app is running!');
   });
 });
