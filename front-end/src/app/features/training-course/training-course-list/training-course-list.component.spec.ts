@@ -34,6 +34,6 @@ describe('TrainingCourseListComponent', () => {
 
     const compiled = fixture.nativeElement;
     const rows = compiled.querySelector('table.training-course tbody tr');
-    expect(rows).toContain('front-end app is running!');
+    expect(rows.length == 2).toBeTrue();
   });
 });
