@@ -3,16 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from '../components/app/app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { StudentModule } from '../../../app/features/students/student/student.module';
+import { StudentModule } from '../../../features/students/student/student.module';
+import { HomeComponent } from '../components/home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    StudentModule // 07/10/2020, see to lazy load the module
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
