@@ -13,4 +13,9 @@ export interface Quest {
      * Current state of the quest
      */
     state: QuestState;
+
+    /**
+     * Value of the winned XP
+     */
+    winnedXP: number;
 }

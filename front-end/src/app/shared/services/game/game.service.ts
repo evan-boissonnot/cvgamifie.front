@@ -23,7 +23,7 @@ export class GameService {
    * @param id number to find a game
    */
   selectOnResume(id: number): Observable<Game> {
-    return this.httpClient.get<Game>(`${environment.apis.games.url}/game/${id}`);
+    return this.httpClient.get<Game>(`${environment.apis.games.url}/${id}`);
   }
   //#endregion
 }

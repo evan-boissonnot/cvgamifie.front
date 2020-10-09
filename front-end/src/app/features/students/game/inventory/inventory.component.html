@@ -1,1 +1,5 @@
-<p>inventory works!</p>
+<h1>Etat des lieux du jeu</h1>
+
+<ng-container *ngIf="game$ | async as game">
+    <app-mission *ngFor="let item of game.missions" [mission]="item"></app-mission>
+</ng-container>

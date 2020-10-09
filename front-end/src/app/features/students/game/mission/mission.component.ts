@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Mission } from 'src/app/core/models/mission';
 
 @Component({
   selector: 'app-mission',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mission.component.sass']
 })
 export class MissionComponent implements OnInit {
+  @Input()
+  mission: Mission;
 
   constructor() { }
 

@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   apis: {
     games: {
-      url: 'https://379ad5ea-e116-423b-bda6-9ecbe926e9ef.mock.pstmn.io/game'
+      url: 'https://eb4262b8-5fb2-401a-997c-d73b6ab1d299.mock.pstmn.io/game'
     }
   }
 };

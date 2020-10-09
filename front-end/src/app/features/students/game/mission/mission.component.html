@@ -1,1 +1,7 @@
-<p>mission works!</p>
+<h3>Mission</h3>
+
+<div>
+    <label>Créée le {{ mission.createdDate | date }}</label>
+
+    <app-quest *ngFor="let item of mission.quests" [quest]="item"></app-quest>
+</div>

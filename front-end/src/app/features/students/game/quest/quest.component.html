@@ -1,1 +1,7 @@
-<p>quest works!</p>
+<div *ngIf="quest">
+    <label>XP gagnés : </label>
+    <div>{{ quest.winnedXP }}</div>
+
+    <label>Etat : </label>
+    <div>{{ quest.state }}</div>
+</div>
