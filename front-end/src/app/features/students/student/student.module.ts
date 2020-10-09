@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
-import { GameModule } from '../game/game.module';
 import { StudentRoutingModule } from './student-routing.module';
 
 @NgModule({
@@ -10,8 +9,7 @@ import { StudentRoutingModule } from './student-routing.module';
   ],
   imports: [
     CommonModule,
-    StudentRoutingModule,
-    GameModule
+    StudentRoutingModule
   ],
   exports: [
     HomeComponent
