@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, TestBed, tick, waitForAsync } from '@angular/core/testing';
 
 import { TrainingCourseListComponent } from './training-course-list.component';
 import { TrainingCourseService } from 'src/app/shared/services/training-courses/training-course.service';
@@ -7,7 +7,7 @@ describe('TrainingCourseListComponent', () => {
   let component: TrainingCourseListComponent;
   let fixture: ComponentFixture<TrainingCourseListComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [
         TrainingCourseListComponent
@@ -22,7 +22,6 @@ describe('TrainingCourseListComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(TrainingCourseListComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {
@@ -37,4 +36,18 @@ describe('TrainingCourseListComponent', () => {
     expect(rows.length === 2).toBeTrue();
     expect(rows).toContain('front-end app is running!');
   });
+
+  it('should go to training create', fakeAsync(() => {
+    fixture.detectChanges();
+
+    const spy = spyOn(component, 'goToNewTrainingCourse');
+
+    const button = fixture.nativeElement.querySelector('button.create');
+    expect(button).toBeTruthy();
+
+    button.click();
+    tick();
+
+    expect(component.goToNewTrainingCourse).toHaveBeenCalled();
+  }));
 });

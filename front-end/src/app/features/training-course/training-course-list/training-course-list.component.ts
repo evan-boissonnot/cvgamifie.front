@@ -12,4 +12,7 @@ export class TrainingCourseListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  goToNewTrainingCourse() {
+
+  }
 }
